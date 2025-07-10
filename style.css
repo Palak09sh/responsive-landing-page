@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+   html, body{
+      height: 100%;
+      width:100%;
+      position:relative;
+      overflow-x: hidden;
+    }
+    header
+    {
+      display:flex;
+      flex-direction: column;
+    }
+    #right-side .desktop
+    {
+      width:610px;
+      height:729px;
+      position:absolute;
+      left:61%;
+    }
+    #right-side .mobile{
+      display:none;
+    }
+  
+    #left-side img{
+      width:937px;
+      height:729px;
+      transform: rotate(180deg);
+      position: absolute;
+      z-index: -1;
+    }
+    #logo{
+    padding:60px 0px 0px 50px;
+    position:absolute;
+    left:9%;
+    }
+    #main-content{
+    z-index: 9999;
+    }
+    #content{
+      font-family:Josefin Sans ;
+      font-size: 46px;
+      font-weight: 300;
+      color:  hsl(0, 36%, 70%);
+      position: absolute;
+      top:28%;
+      left:19%;
+      letter-spacing: 0.5em;
+      line-height: 1.4em;
+    }
+    #content h6{
+      color: #000;
+      font-size: 56px;
+    }
+    #content p{
+      padding-top: 40px;
+      color:hsl(0, 80%, 86%);
+      letter-spacing: normal;
+      line-height: normal;
+      font-size: 16px; 
+    }
+    #footer{
+      display: flex;
+      flex-direction: row-reverse;
+      position: absolute;
+      left:19%;
+      bottom:26%;
+    }
+    #footer input{
+    border-color:hsl(0, 36%, 70%);
+    width: 270px;
+    height: 33px;
+    border-radius: 45px;
+    font-family:Josefin Sans ;
+    font-size: 16px;
+    text-indent: 13px;
+    color:hsl(0, 80%, 86%);
+    }
+    #footer #btn{
+      background-color:  hsl(0, 83%, 70%);
+      position: absolute;
+      width:53px;
+      height: 33px;
+      padding-right: 10px;
+      border-radius: 45px;
+      border-color:hsl(0, 36%, 70%) ;
+    }
+    /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Responsiveness>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+    @media (max-width : 720px) {
+      header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    #logo{
+       padding-top: 19px;
+       padding-left: 4px;
+        
+    }
+    #right-side .desktop{
+      display:none;
+     }
+    #right-side .mobile{
+      display:block;
+      width: 100%;
+      margin-top: 69px;
+    }
+    #left-side {
+    display:none;
+    }
+    #main-content {
+      position: static;
+      padding:20px 0px;
+      text-align: center;
+    }
+    #content{
+        position: static;
+        padding: 20px 10px;
+        font-size: 32px;
+        letter-spacing: 0.3em;
+    }
+    #content h6 {
+       font-size: 36px;
+       line-height: 1.2;
+    }
+    #content p {
+    font-size: 14px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    color: hsl(0, 36%, 70%);
+   }
+   #footer {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  #footer #btn {
+    background-color: hsl(0, 93%, 68%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: -50px;
+  }
+  #footer #btn img {
+    display: block;
+    width: 16px;
+    
+  }
+}
+    
