@@ -37,19 +37,28 @@
       <div id="footer">
     <input type="email"id="emailinput"  placeholder="Email Address">
       <button id="btn" onclick="myFunction()" ><img src="./images/icon-arrow.svg" alt=""></button>
+      <span id="error" style="color:red"></span>
       </div>
     </div>
     
   </header>
   <script>
-    const input = document.getElementsByName("emailinput").value
+    const error = document.getElementById("error")
+    const email = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const input = document.getElementById("emailinput").value
   function myFunction()
   {
-    if(input != "name@gmail.com"){
-    alert("Invalid Email")
+    if(input === "") {
+      error.textContent = "Email is required";
+      return false;
+    }
+    else if(!email.test(input))
+    {
+    error.textContent = "Enter valid email address"
     }
     else{
-      prompt("Valid mail")
+    error.textContent=""
+      return true;
     }
   }
   </script>
